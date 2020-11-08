@@ -1,4 +1,6 @@
-class Amazon_Page {
+import BasePage from './base_Page'
+
+class Amazon_Page extends BasePage{
 
     get best_sellers_banner() { return $('h1*=Best Sellers in'); }
     get toc_electronics() { return $("//a[.='Electronics']");}
@@ -8,6 +10,10 @@ class Amazon_Page {
     get search_button() {return $("//input[@value='Go']")}
     get results_section() {return $("//div[@class='a-section a-spacing-small a-spacing-top-small']")}
     
+    constructor(){
+        super('Amazon Page')
+    }
+
     clickSearchText() {
         return this.search_text.click();
     }
