@@ -35,7 +35,7 @@ git version 2.24.3 (Apple Git-128)
 ```
 #### Clone repo and stuff
 ```
-mike@MacBook-Pro:~/work$ git clone https://github.com/miguelcoca/AmazonSample.git
+mike@MacBook-Pro:~/work$ git clone https://github.com/miguelcoca/js-wdio-cucumber.git
 Cloning into 'repofoldername'...
 Username for 'https://github.com':
 etc..
@@ -64,4 +64,13 @@ mike@MacBook-Pro:~/work$ allure generate ./allure-results/
 Generate Report force clean previous and Open Allure Report
 ```
 mike@MacBook-Pro:~/work$  allure generate .\allure-results\ --clean && allure open
+```
+
+#### TODO
+```
+Complete multi Browser, Headless support, maybe Browser stack like service so far this is not fully working only Crome support was fully added
+
+Add support for remote execution such as Saucelabs, applitools or similar services.
+
+
 ```
