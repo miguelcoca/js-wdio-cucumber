@@ -177,13 +177,14 @@ exports.config = {
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
     reporters: ['dot', 'spec', 
-    // ['allure',
-    // {
-    //     outputDir: "allure-results",
-    //     useCucumberStepReporter: true,
-    //     disableWebdriverStepsReporting: true,
-    //     disableMochaHooks: true
-    //     },]
+    ['allure',
+    {
+        outputDir: "allure-results",
+        useCucumberStepReporter: true,
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+        disableMochaHooks: true
+        },]
     ],
 
 

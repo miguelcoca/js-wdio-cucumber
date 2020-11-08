@@ -1,3 +1,4 @@
+import testdata from '../testdata/testdata';
 import BasePage from './base_Page'
 
 class Amazon_Page extends BasePage{
@@ -11,7 +12,7 @@ class Amazon_Page extends BasePage{
     get results_section() {return $("//div[@class='a-section a-spacing-small a-spacing-top-small']")}
     
     constructor(){
-        super('Amazon Page')
+        super(testdata.amazonPageTitle)
     }
 
     clickSearchText() {
