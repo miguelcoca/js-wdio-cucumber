@@ -6,7 +6,8 @@ Recommended MacOSX Catalina 10.15.7 & brew package manager not tested in windows
 it should work flawlesly if dependencies are satisfied
 Chrome Browser Version 86.0.4240.183
 
-Node JS v15.1.0+ 
+Node 15.1.0 
+npm 7.0.8
 ```
 #### Resources
 ```
