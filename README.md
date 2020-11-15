@@ -52,6 +52,8 @@ mike@MacBook-Pro:~/work$ npm test
  
 mike@MacBook-Pro:~/work$ npm test -- --spec=features/amazonBestSellerHeadphones.feature 
 ```
+![alt text](https://github.com/miguelcoca/js-wdio-cucumber/blob/main/Screenshot%202020-11-08%20140543.png?raw=true)
+
 #### Reporting
 
 Project leverages Dot, Spec and Allure Report 
@@ -65,6 +67,8 @@ Generate Report force clean previous and Open Allure Report
 ```
 mike@MacBook-Pro:~/work$  allure generate .\allure-results\ --clean && allure open
 ```
+![alt text](https://github.com/miguelcoca/js-wdio-cucumber/blob/main/Screenshot%202020-11-08%20135329.png?raw=true)
+![alt text](https://github.com/miguelcoca/js-wdio-cucumber/blob/main/Screenshot%202020-11-08%20135417.png?raw=true)
 
 #### TODO
 ```
