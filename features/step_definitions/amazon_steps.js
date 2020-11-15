@@ -1,16 +1,18 @@
 import { Given, When, Then } from 'cucumber';
-const Amazon_Page = require('../../features/pageObjects/Amazon_page')
-const test_data = require('../../features/testdata/testdata.js')
-
+import amazonHome from '../pageObjects/amazonHome';
+import Amazon_Page from '../pageObjects/amazonBestSellersPage';
+import AmazonBelt from '../pageObjects/amazonBelt';
+import AmazonResults from '../pageObjects/amazonResults';
+import testdata from '../testdata/testdata'
 
 Given(/^I am in Amazon Store Home Page$/, function () {
-    browser.url(test_data.amazonURL);
-    Amazon_Page.clickSearchText();
-    expect(browser.getUrl()).toBe(test_data.amazonURL);
+    browser.url(testdata.amazonURL);
+    AmazonBelt.clickSearchText();
+    expect(browser.getUrl()).toBe(testdata.amazonURL);
 });
 
 Given (/^I browse to the Amazon Best Sellers page$/, function () {
-    browser.url(test_data.amazonURL+test_data.bestSellersURL);
+    browser.url(testdata.amazonURL+testdata.bestSellersURL);
 });
 
 When (/^I browse for headphones category from the departments TOC$/, function () {
@@ -22,8 +24,8 @@ Then (/^I should see "([^"]*)" entitled details result page$/, function (title) 
 });
 
 When (/^I search for "([^"]*)"$/, function (search_pattern) {
-    Amazon_Page.searchFor(search_pattern);
+    amazonHome.searchForItem(search_pattern);
 });
-Then (/^I should see poneer headphones in the result page$/, function () {
-    expect(Amazon_Page.resultsPageDisplayed()).toBe(true);
+Then (/^I should see "([^"]*)" in the result page$/, function (pattern) {
+    expect(AmazonResults.resultsPageDisplayed(pattern)).toBe(true);
 });

@@ -12,4 +12,4 @@ Feature: Amazon Best Sellers Headphones Challenge
 
     Scenario: As a amazon user I want to search for Headphones
         When I search for "pioneer headphones"
-        Then I should see poneer headphones in the result page
+        Then I should see "pioneer headphones" in the result page
